@@ -1,0 +1,1936 @@
+        /* =====================================================
+           CONFIGURAÇÕES GERAIS
+        ===================================================== */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+
+        :root {
+
+            --background:
+                #020814;
+
+            --primary:
+                #008cff;
+
+            --secondary:
+                #00d9ff;
+
+            --blue-dark:
+                #06172d;
+
+            --card:
+                rgba(5, 20, 40, 0.88);
+
+            --border:
+                rgba(0, 174, 255, 0.35);
+
+            --text:
+                #ffffff;
+
+            --muted:
+                #b6c5d9;
+
+        }
+
+
+        html {
+
+            scroll-behavior: smooth;
+
+        }
+
+
+        body {
+
+            margin: 0;
+
+            min-height: 100vh;
+
+            font-family:
+                "Roboto",
+                sans-serif;
+
+            background:
+                var(--background);
+
+            color:
+                var(--text);
+
+            line-height:
+                1.6;
+
+        }
+
+
+        a {
+
+            text-decoration: none;
+
+            color: inherit;
+
+        }
+
+
+        /* =====================================================
+           CONTAINER PRINCIPAL
+        ===================================================== */
+
+        .container {
+
+            width:
+                min(1100px, 94%);
+
+            margin:
+                0 auto;
+
+            padding:
+                30px 0 60px;
+
+        }
+
+
+        /* =====================================================
+           ETAPA 1 - PERFIL
+        ===================================================== */
+
+        .hero {
+
+            position:
+                relative;
+
+            width:
+                100%;
+
+            min-height:
+                700px;
+
+            border-radius:
+                25px;
+
+            overflow:
+                hidden;
+
+            background-image:
+                url("img/background.jpg");
+
+            background-size:
+                cover;
+
+            background-position:
+                center;
+
+            background-repeat:
+                no-repeat;
+
+            border:
+                1px solid
+                rgba(0, 174, 255, 0.55);
+
+            box-shadow:
+                0 0 45px
+                rgba(0, 140, 255, 0.25);
+
+        }
+
+
+        /* CAMADA DE PROTEÇÃO */
+
+        .hero-overlay {
+
+            position:
+                absolute;
+
+            inset:
+                0;
+
+            background:
+                linear-gradient(
+                    rgba(2, 8, 20, 0.20),
+                    rgba(2, 8, 20, 0.62)
+                );
+
+            z-index:
+                1;
+
+        }
+
+
+        /* CONTEÚDO DO PERFIL */
+
+        .hero-content {
+
+            position:
+                relative;
+
+            z-index:
+                2;
+
+            min-height:
+                700px;
+
+            display:
+                flex;
+
+            flex-direction:
+                column;
+
+            align-items:
+                center;
+
+            justify-content:
+                center;
+
+            text-align:
+                center;
+
+            padding:
+                40px;
+
+        }
+
+
+        /* FOTO */
+
+        .profile-photo-container {
+
+            width:
+                250px;
+
+            height:
+                250px;
+
+            padding:
+                0%;
+                
+            border-radius:
+                100%;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    var(--secondary),
+                    var(--primary)
+                );
+
+            box-shadow:
+                0 0 40px
+                rgba(0, 200, 255, 0.75);
+
+            margin-bottom:
+                50px;
+
+            transition:
+                0.4s;
+
+        }
+
+
+        .profile-photo-container:hover {
+
+            transform:
+                scale(1.05);
+
+            box-shadow:
+                0 0 55px
+                rgba(0, 200, 255, 1);
+
+        }
+
+
+        .profile-photo {
+
+            width:
+                100%;
+
+            height:
+                100%;
+
+            object-fit:
+                cover;
+
+            border-radius:
+                50%;
+
+            border:
+                1px solid
+                #020814;
+
+        }
+
+        /* NOME */
+
+        .hero h1 {
+
+            font-size:
+                clamp(32px, 5vw, 48px);
+
+            font-weight:
+                900;
+
+            margin:
+                8px 0;
+
+            color:
+                white;
+
+            text-shadow:
+                0 3px 15px
+                rgba(0,0,0,.9);
+
+        }
+
+
+        /* CARGO */
+
+        .hero h2 {
+
+            font-size:
+                clamp(17px, 3vw, 23px);
+
+            font-weight:
+                500;
+
+            color:
+                var(--secondary);
+
+            margin:
+                5px 0 20px;
+
+        }
+
+
+        /* ESPECIALIDADES */
+
+        .specialties {
+
+            max-width:
+                900px;
+
+            font-size:
+                18px;
+
+            font-weight:
+                700;
+
+            color:
+                white;
+
+            line-height:
+                1.8;
+
+            text-shadow:
+                0 2px 10px
+                black;
+
+        }
+
+
+        /* DESCRIÇÃO */
+
+        .profile-description {
+
+            max-width:
+                760px;
+
+            margin-top:
+                20px;
+
+            color:
+                #dce8f7;
+
+            font-size:
+                17px;
+
+            line-height:
+                1.8;
+
+            text-shadow:
+                0 2px 8px
+                black;
+
+        }
+
+
+        /* BOTÕES DO HERO */
+
+        .hero-buttons {
+
+            display:
+                flex;
+
+            flex-wrap:
+                wrap;
+
+            justify-content:
+                center;
+
+            gap:
+                12px;
+
+            margin-top:
+                28px;
+
+        }
+
+
+        .hero-buttons a {
+
+            display:
+                flex;
+
+            align-items:
+                center;
+
+            justify-content:
+                center;
+
+            gap:
+                8px;
+
+            padding:
+                12px 22px;
+
+            border-radius:
+                10px;
+
+            background:
+                rgba(4, 28, 60, 0.88);
+
+            border:
+                1px solid
+                var(--secondary);
+
+            color:
+                white;
+
+            font-weight:
+                700;
+
+            transition:
+                0.3s;
+
+        }
+
+
+        .hero-buttons a:hover {
+
+            background:
+                var(--primary);
+
+            transform:
+                translateY(-4px);
+
+            box-shadow:
+                0 8px 25px
+                rgba(0, 160, 255, 0.45);
+
+        }
+
+
+        /* =====================================================
+           TÍTULOS DAS SEÇÕES
+        ===================================================== */
+
+        .section-title {
+
+            text-align:
+                center;
+
+            margin:
+                20px 0 20px;
+
+        }
+
+        .section-title h2 {
+
+            font-size:
+                32px;
+
+            color:
+                white;
+
+            margin-bottom:
+                8px;
+
+        }
+
+
+        .section-title h2 i {
+
+            color:
+                var(--secondary);
+
+            margin-right:
+                10px;
+
+        }
+
+
+        .section-title p {
+
+            color:
+                var(--muted);
+
+            font-size:
+                16px;
+
+        }
+
+
+        /* =====================================================
+           ETAPA 2 - TRAJETÓRIA
+        ===================================================== */
+
+        .cards {
+
+            display:
+                grid;
+
+            grid-template-columns:
+                repeat(2, 1fr);
+
+            gap:
+                20px;
+
+        }
+
+
+        .info-card {
+
+            background:
+                var(--card);
+
+            border:
+                1px solid
+                var(--border);
+
+            border-radius:
+                18px;
+
+            padding:
+                25px;
+
+            backdrop-filter:
+                blur(10px);
+
+            transition:
+                0.3s;
+
+        }
+
+
+        .info-card:hover {
+
+            transform:
+                translateY(-5px);
+
+            border-color:
+                var(--secondary);
+
+            box-shadow:
+                0 10px 35px
+                rgba(0, 150, 255, 0.18);
+
+        }
+
+
+        .info-card .card-icon {
+
+            width:
+                50px;
+
+            height:
+                50px;
+
+            display:
+                flex;
+
+            align-items:
+                center;
+
+            justify-content:
+                center;
+
+            border-radius:
+                12px;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    var(--primary),
+                    var(--secondary)
+                );
+
+            font-size:
+                22px;
+
+            margin-bottom:
+                15px;
+
+        }
+
+
+        .info-card h3 {
+
+            color:
+                white;
+
+            font-size:
+                21px;
+
+            margin-bottom:
+                8px;
+
+        }
+
+
+        .info-card .period {
+
+            color:
+                var(--secondary);
+
+            font-size:
+                14px;
+
+            font-weight:
+                700;
+
+            margin-bottom:
+                10px;
+
+        }
+
+
+        .info-card p {
+
+            color:
+                var(--muted);
+
+            line-height:
+                1.7;
+
+        }
+
+
+        /* =====================================================
+           FORMAÇÃO
+        ===================================================== */
+
+        .education {
+
+            margin-top:
+                30px;
+
+            display:
+                grid;
+
+            grid-template-columns:
+                repeat(3, 1fr);
+
+            gap:
+                15px;
+
+        }
+
+
+        .education-item {
+
+            padding:
+                20px;
+
+            background:
+                rgba(7, 27, 50, 0.8);
+
+            border:
+                1px solid
+                var(--border);
+
+            border-radius:
+                15px;
+
+            text-align:
+                center;
+
+        }
+
+
+        .education-item i {
+
+            font-size:
+                30px;
+
+            color:
+                var(--secondary);
+
+            margin-bottom:
+                10px;
+
+        }
+
+
+        .education-item h4 {
+
+            font-size:
+                16px;
+
+            margin-bottom:
+                5px;
+
+        }
+
+
+        .education-item p {
+
+            color:
+                var(--muted);
+
+            font-size:
+                14px;
+
+        }
+
+
+        /* =====================================================
+           ETAPA 3 - PESQUISA
+        ===================================================== */
+
+        .research-section {
+
+            margin-top:
+                70px;
+
+        }
+
+
+        .research-card {
+
+            position:
+                relative;
+
+            padding:
+                35px;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    rgba(5, 25, 50, 0.95),
+                    rgba(3, 15, 32, 0.92)
+                );
+
+            border:
+                1px solid
+                rgba(0, 217, 255, 0.45);
+
+            border-radius:
+                22px;
+
+            box-shadow:
+                0 0 35px
+                rgba(0, 140, 255, 0.12);
+
+        }
+
+
+        .research-card h3 {
+
+            color:
+                var(--secondary);
+
+            font-size:
+                25px;
+
+            margin-bottom:
+                15px;
+
+        }
+
+
+        .research-card p {
+
+            color:
+                var(--muted);
+
+            font-size:
+                17px;
+
+            line-height:
+                1.8;
+
+        }
+
+
+        /* TAGS */
+
+        .tags {
+
+            display:
+                flex;
+
+            flex-wrap:
+                wrap;
+
+            gap:
+                8px;
+
+            margin-top:
+                22px;
+
+        }
+
+
+        .tags span {
+
+            padding:
+                7px 13px;
+
+            border-radius:
+                20px;
+
+            background:
+                rgba(0, 180, 255, 0.10);
+
+            border:
+                1px solid
+                rgba(0, 180, 255, 0.35);
+
+            color:
+                var(--secondary);
+
+            font-size:
+                13px;
+
+            font-weight:
+                600;
+
+        }
+
+
+        /* =====================================================
+           PUBLICAÇÕES
+        ===================================================== */
+
+        .publication-card {
+
+            display:
+                flex;
+
+            gap:
+                20px;
+
+            align-items:
+                flex-start;
+
+            padding:
+                25px;
+
+            margin-top:
+                20px;
+
+            background:
+                var(--card);
+
+            border:
+                1px solid
+                var(--border);
+
+            border-radius:
+                18px;
+
+        }
+
+
+        .publication-icon {
+
+            min-width:
+                50px;
+
+            height:
+                50px;
+
+            display:
+                flex;
+
+            align-items:
+                center;
+
+            justify-content:
+                center;
+
+            border-radius:
+                12px;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    var(--primary),
+                    var(--secondary)
+                );
+
+            font-size:
+                22px;
+
+        }
+
+
+        .publication-card h3 {
+
+            margin-bottom:
+                7px;
+
+        }
+
+
+        .publication-card p {
+
+            color:
+                var(--muted);
+
+        }
+
+
+        /* =====================================================
+           APROVAÇÕES
+        ===================================================== */
+
+        .approvals {
+
+            display:
+                grid;
+
+            grid-template-columns:
+                repeat(2, 1fr);
+
+            gap:
+                15px;
+
+        }
+
+
+        .approval {
+
+            padding:
+                20px;
+
+            background:
+                var(--card);
+
+            border:
+                1px solid
+                var(--border);
+
+            border-radius:
+                15px;
+
+        }
+
+
+        .approval strong {
+
+            color:
+                var(--secondary);
+
+        }
+
+
+        .approval p {
+
+            color:
+                var(--muted);
+
+            margin-top:
+                5px;
+
+        }
+
+
+        /* =====================================================
+           LINKS
+        ===================================================== */
+
+        .links {
+
+            display:
+                grid;
+
+            grid-template-columns:
+                repeat(3, 1fr);
+
+            gap:
+                15px;
+
+            margin-top:
+                30px;
+
+        }
+
+
+        .links a {
+
+            display:
+                flex;
+
+            align-items:
+                center;
+
+            justify-content:
+                center;
+
+            gap:
+                10px;
+
+            padding:
+                17px;
+
+            border-radius:
+                12px;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #09245a,
+                    #123b87
+                );
+
+            border:
+                1px solid
+                rgba(0, 174, 255, 0.25);
+
+            color:
+                white;
+
+            font-weight:
+                700;
+
+            transition:
+                0.3s;
+
+        }
+
+
+        .links a:hover {
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #087cff,
+                    #00bfff
+                );
+
+            transform:
+                translateY(-3px);
+
+        }
+
+
+        .links i {
+
+            font-size:
+                20px;
+
+        }
+
+
+        /* =====================================================
+           FOOTER
+        ===================================================== */
+
+        footer {
+
+            text-align:
+                center;
+
+            margin-top:
+                50px;
+
+            padding-top:
+                25px;
+
+            border-top:
+                1px solid
+                rgba(255,255,255,0.08);
+
+            color:
+                #71839b;
+
+            font-size:
+                13px;
+
+        }
+
+
+        /* =====================================================
+           ANIMAÇÃO
+        ===================================================== */
+
+        @keyframes aparecer {
+
+            from {
+
+                opacity:
+                    0;
+
+                transform:
+                    translateY(25px);
+
+            }
+
+            to {
+
+                opacity:
+                    1;
+
+                transform:
+                    translateY(0);
+
+            }
+
+        }
+
+
+        .hero {
+
+            animation:
+                aparecer 0.8s ease;
+
+        }
+
+
+        .info-card,
+        .research-card,
+        .publication-card {
+
+            animation:
+                aparecer 0.8s ease;
+
+        }
+
+
+        /* =====================================================
+           RESPONSIVIDADE
+        ===================================================== */
+
+        @media (max-width: 800px) {
+
+            .cards {
+
+                grid-template-columns:
+                    1fr;
+
+            }
+
+
+            .education {
+
+                grid-template-columns:
+                    1fr;
+
+            }
+
+
+            .approvals {
+
+                grid-template-columns:
+                    1fr;
+
+            }
+
+
+            .links {
+
+                grid-template-columns:
+                    1fr;
+
+            }
+
+
+            .hero {
+
+                min-height:
+                    720px;
+
+                background-position:
+                    center;
+
+            }
+
+
+            .hero-content {
+
+                min-height:
+                    720px;
+
+                padding:
+                    25px;
+
+            }
+
+        }
+
+
+        @media (max-width: 500px) {
+
+            .container {
+
+                width:
+                    94%;
+
+                padding-top:
+                    15px;
+
+            }
+
+
+            .hero {
+
+                border-radius:
+                    18px;
+
+                min-height:
+                    700px;
+
+            }
+
+
+            .hero-content {
+
+                min-height:
+                    700px;
+
+                padding:
+                    20px 15px;
+
+            }
+
+
+            .profile-photo-container {
+
+                width:
+                    155px;
+
+                height:
+                    155px;
+
+            }
+
+
+            .hero h1 {
+
+                font-size:
+                    30px;
+
+            }
+
+
+            .hero h2 {
+
+                font-size:
+                    16px;
+
+            }
+
+
+            .specialties {
+
+                font-size:
+                    14px;
+
+            }
+
+
+            .profile-description {
+
+                font-size:
+                    14px;
+
+            }
+
+
+            .hero-buttons a {
+
+                width:
+                    100%;
+
+            }
+
+
+            .section-title {
+
+                margin-top:
+                    50px;
+
+            }
+
+
+            .section-title h2 {
+
+                font-size:
+                    26px;
+
+            }
+
+
+            .research-card {
+
+                padding:
+                    22px;
+
+            }
+
+
+            .publication-card {
+
+                flex-direction:
+                    column;
+
+            }
+
+        }
+
+   /* ==========================================
+   CONTEÚDO FORA DO CONTAINER
+========================================== */
+
+.outside-left,
+.outside-right {
+
+    position: fixed;
+
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 45px;
+
+    z-index: 0;
+
+    color: #00aaff;
+
+    opacity: 0.55;
+
+}
+
+
+/* ESQUERDA */
+
+.outside-left {
+
+    left: 25px;
+
+}
+
+
+/* DIREITA */
+
+.outside-right {
+
+    right: 25px;
+
+}
+
+
+/* ITEM */
+
+.outside-item {
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 8px;
+
+    text-align: center;
+
+    font-size: 9px;
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+
+}
+
+
+/* ÍCONE */
+
+.outside-item i {
+
+    font-size: 25px;
+
+    color: #008cff;
+
+    text-shadow:
+        0 0 12px
+        rgba(0, 170, 255, 0.8);
+
+}
+
+
+/* LINHA TECNOLÓGICA */
+
+.outside-item::after {
+
+    content: "";
+
+    width: 45px;
+
+    height: 1px;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            #008cff,
+            transparent
+        );
+
+}
+
+
+/* EFEITO AO PASSAR O MOUSE */
+
+.outside-item:hover {
+
+    opacity: 1;
+
+    transform:
+        scale(1.08);
+
+}
+
+
+.outside-item:hover i {
+
+    color: #00d9ff;
+
+    text-shadow:
+        0 0 20px
+        #00d9ff;
+
+}
+
+
+/* CELULAR */
+
+@media (max-width: 1250px) {
+
+    .outside-left,
+    .outside-right {
+
+        display: none;
+
+    }
+
+}
+/* =====================================================
+   TRAJETÓRIA PROFISSIONAL
+===================================================== */
+
+.trajetoria {
+    width: 100%;
+    max-width: 1290px;
+    margin: 0 auto;
+    padding: 0px 0 0px;
+}
+
+/* =====================================================
+   CABEÇALHO
+===================================================== */
+
+.trajetoria-header {
+
+    width: 100%;
+
+    max-width: 850px;
+
+    margin:
+        0 auto
+        15px;
+
+    text-align: center;
+
+}
+
+
+.trajetoria-label {
+
+    display: inline-block;
+
+    margin-bottom: 12px;
+
+    color: #00cfff;
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    letter-spacing: 3px;
+
+}
+
+
+.trajetoria-header h2 {
+
+    margin: 0 0 8px;
+
+    color: #ffffff;
+
+    font-size: 32px;
+
+    font-weight: 700;
+
+    text-align: center;
+
+}
+
+/* ÍCONE DA TRAJETÓRIA - PADRONIZADO */
+
+.trajetoria-header h2 i {
+
+    color: var(--secondary);
+
+    margin-right: 10px;
+
+}
+
+.trajetoria-header p {
+
+    margin: 0;
+
+    color: #9fb2c8;
+
+    font-size: 16px;
+
+    line-height: 1.7;
+
+}
+
+
+/* =====================================================
+   GRID
+===================================================== */
+
+.trajetoria-grid {
+
+    width: 100%;
+
+    max-width: 1350px;
+
+    margin: 0 auto;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+    gap: 26px;
+
+}
+
+
+/* =====================================================
+   CARD
+===================================================== */
+
+.trajetoria-card {
+
+    position: relative;
+
+    overflow: hidden;
+
+    padding: 32px;
+
+    min-height: 420px;
+
+    box-sizing: border-box;
+
+    border-radius: 22px;
+
+    border:
+        1px solid
+        rgba(0, 180, 255, 0.28);
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(4, 25, 48, 0.96),
+            rgba(2, 12, 28, 0.94)
+        );
+
+    box-shadow:
+        0 15px 40px
+        rgba(0, 0, 0, 0.25);
+
+    transition:
+        transform 0.35s ease,
+        border-color 0.35s ease,
+        box-shadow 0.35s ease;
+
+}
+
+
+/* =====================================================
+   EFEITO DE LUZ
+===================================================== */
+
+.trajetoria-card::before {
+
+    content: "";
+
+    position: absolute;
+
+    top: -100px;
+
+    right: -100px;
+
+    width: 220px;
+
+    height: 220px;
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(0, 180, 255, 0.12),
+            transparent 70%
+        );
+
+    pointer-events: none;
+
+}
+
+
+/* =====================================================
+   LINHA SUPERIOR
+===================================================== */
+
+.trajetoria-card::after {
+
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+
+    left: 30px;
+
+    right: 30px;
+
+    height: 2px;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            #00cfff,
+            transparent
+        );
+
+    opacity: 0.7;
+
+}
+
+
+/* =====================================================
+   HOVER
+===================================================== */
+
+.trajetoria-card:hover {
+
+    transform:
+        translateY(-8px);
+
+    border-color:
+        rgba(0, 207, 255, 0.85);
+
+    box-shadow:
+        0 20px 55px
+        rgba(0, 150, 255, 0.18);
+
+}
+
+
+/* =====================================================
+   CARD DESTAQUE — TRT-1
+===================================================== */
+
+.trajetoria-card.destaque {
+
+    border-color:
+        rgba(0, 207, 255, 0.55);
+
+    box-shadow:
+        0 15px 50px
+        rgba(0, 170, 255, 0.12);
+
+}
+
+
+/* =====================================================
+   ÍCONE
+===================================================== */
+
+.trajetoria-icon {
+
+    width: 58px;
+
+    height: 58px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    margin-bottom: 20px;
+
+    border-radius: 15px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #008cff,
+            #00d9ff
+        );
+
+    color: #ffffff;
+
+    font-size: 24px;
+
+    box-shadow:
+        0 8px 25px
+        rgba(0, 174, 255, 0.25);
+
+}
+
+
+/* =====================================================
+   NÚMERO DO CARD
+===================================================== */
+
+.trajetoria-numero {
+
+    position: absolute;
+
+    top: 27px;
+
+    right: 30px;
+
+    color:
+        rgba(0, 207, 255, 0.16);
+
+    font-size: 42px;
+
+    font-weight: 900;
+
+    line-height: 1;
+
+}
+
+
+/* =====================================================
+   NOME DA INSTITUIÇÃO
+===================================================== */
+
+.trajetoria-card h3 {
+
+    position: relative;
+
+    margin:
+        0 70px 8px 0;
+
+    color: #ffffff;
+
+    font-size: 25px;
+
+    font-weight: 800;
+
+}
+
+
+/* =====================================================
+   CARGO
+===================================================== */
+
+.trajetoria-card h4 {
+
+    margin:
+        0 0 12px;
+
+    color: #00d9ff;
+
+    font-size: 16px;
+
+    line-height: 1.5;
+
+}
+
+
+/* =====================================================
+   ÁREA
+===================================================== */
+
+.trajetoria-area {
+
+    display: block;
+
+    margin-bottom: 22px;
+
+    color: #6ecfff;
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    letter-spacing: 0.8px;
+
+    text-transform: uppercase;
+
+}
+
+
+/* =====================================================
+   DESCRIÇÃO
+===================================================== */
+
+.trajetoria-card p {
+
+    margin:
+        0 0 14px;
+
+    color: #b8c7d9;
+
+    font-size: 14px;
+
+    line-height: 1.75;
+
+}
+
+
+/* =====================================================
+   TAGS
+===================================================== */
+
+.trajetoria-tags {
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 8px;
+
+    margin-top: 22px;
+
+}
+
+
+.trajetoria-tags span {
+
+    padding:
+        6px 11px;
+
+    border:
+        1px solid
+        rgba(0, 200, 255, 0.25);
+
+    border-radius: 20px;
+
+    background:
+        rgba(0, 170, 255, 0.07);
+
+    color: #67dcff;
+
+    font-size: 10px;
+
+    font-weight: 700;
+
+    letter-spacing: 0.5px;
+
+}
+
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 1000px) {
+
+    .trajetoria {
+
+        padding-left: 4%;
+
+        padding-right: 4%;
+
+    }
+
+
+    .trajetoria-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+}
+
+
+/* =====================================================
+   CELULAR
+===================================================== */
+
+@media (max-width: 600px) {
+
+    .trajetoria {
+
+        padding:
+            60px 20px 70px;
+
+    }
+
+
+    .trajetoria-card {
+
+        padding: 25px;
+
+        min-height: auto;
+
+    }
+
+
+    .trajetoria-card h3 {
+
+        font-size: 22px;
+
+    }
+
+
+    .trajetoria-numero {
+
+        top: 25px;
+
+        right: 22px;
+
+        font-size: 32px;
+
+    }
+
+
+    .trajetoria-card p {
+
+        font-size: 14px;
+
+    }
+
+}
+
