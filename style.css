@@ -1752,3 +1752,11 @@ footer {
 
 }
 
+body {
+    background-color: #020914 !important;
+    background-image: url("./images/fundo.png") !important;
+    background-size: cover !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+}
+
