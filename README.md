@@ -1,4 +1,4 @@
-# 🚀 Portfólio Profissional — Ygor Delfino da Silva
+# 🚀 Portfólio Profissional — Ygor Silva
 
 ## 💻 Tecnologia • Redes • Segurança • IA • Telecomunicações • Educação • Direito Digital
 
