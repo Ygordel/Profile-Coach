@@ -68,7 +68,7 @@ a {
     border-radius: 25px;
     border: 1px solid rgba(0, 174, 255, 0.55);
 
-    background-image: url("Perfil-Coach/background.jpg");
+    background-image: url("img/background.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -1750,13 +1750,5 @@ footer {
         padding-top: 15px;
     }
 
-}
-
-body {
-    background-color: #020914 !important;
-    background-image: url("./images/fundo.png") !important;
-    background-size: cover !important;
-    background-position: center !important;
-    background-repeat: no-repeat !important;
 }
 
