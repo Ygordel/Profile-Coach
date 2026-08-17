@@ -68,18 +68,10 @@ a {
     border-radius: 25px;
     border: 1px solid rgba(0, 174, 255, 0.55);
 
-    background:
-        linear-gradient(
-            rgba(2, 8, 20, 0.18),
-            rgba(2, 8, 20, 0.48)
-        ),
-        url("fundo.jpg");
+    background: #020814;
 
-    background-size: cover;
-    background-position: center center;
-    background-repeat: no-repeat;
-
-    box-shadow: 0 0 45px rgba(0, 140, 255, 0.25);
+    box-shadow:
+        0 0 45px rgba(0, 140, 255, 0.25);
 
     animation: aparecer 0.8s ease;
 }
