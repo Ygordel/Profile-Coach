@@ -68,13 +68,16 @@ a {
     border-radius: 25px;
     border: 1px solid rgba(0, 174, 255, 0.55);
 
-    background: #020814;
+    background-image: url("img/background.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 
-    box-shadow:
-        0 0 45px rgba(0, 140, 255, 0.25);
+    box-shadow: 0 0 45px rgba(0, 140, 255, 0.25);
 
     animation: aparecer 0.8s ease;
 }
+
 
 /* =========================================================
    CAMADA DE PROTEÇÃO DO HERO
@@ -1524,13 +1527,12 @@ footer {
         grid-template-columns: 1fr;
     }
 
-   .hero {
-    min-height: 720px;
+    .hero {
+        min-height: 720px;
 
-    background-size: auto 100%;
-    background-position: 68% center;
-    background-repeat: no-repeat;
-}
+        background-position: center;
+    }
+
     .hero-content {
         min-height: 720px;
 
@@ -1560,15 +1562,11 @@ footer {
 
     /* HERO */
 
-   .hero {
-    min-height: 700px;
+    .hero {
+        min-height: 700px;
 
-    border-radius: 18px;
-
-    background-size: auto 100%;
-    background-position: 68% center;
-    background-repeat: no-repeat;
-}
+        border-radius: 18px;
+    }
 
     .hero-content {
         min-height: 700px;
@@ -1753,6 +1751,4 @@ footer {
     }
 
 }
-
-
 
