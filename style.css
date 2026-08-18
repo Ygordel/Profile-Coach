@@ -54,6 +54,12 @@ body {
     overflow-x: hidden;
 }
 
+main,
+section,
+.hero {
+    background-color: transparent;
+}
+
 a {
     color: inherit;
     text-decoration: none;
@@ -1769,3 +1775,36 @@ footer {
 
 }
 
+@media (max-width: 600px) {
+
+    html,
+    body {
+        width: 100%;
+        min-height: 100%;
+
+        background-color: #020814;
+    }
+
+    body {
+        background-image:
+            linear-gradient(
+                rgba(2, 8, 20, 0.12),
+                rgba(2, 8, 20, 0.25)
+            ),
+            url("./fundo.jpg");
+
+        background-repeat: no-repeat;
+
+        background-position: center top;
+
+        background-size: cover;
+
+        background-attachment: scroll;
+    }
+
+    main,
+    section,
+    .hero {
+        background-color: transparent;
+    }
+}
