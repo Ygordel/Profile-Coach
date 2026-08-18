@@ -32,8 +32,26 @@ body {
     font-family: "Roboto", sans-serif;
     line-height: 1.6;
 
-    background: var(--background);
     color: var(--text);
+
+    background-color: var(--background);
+
+    background-image:
+        linear-gradient(
+            rgba(2, 8, 20, 0.20),
+            rgba(2, 8, 20, 0.35)
+        ),
+        url("./background.jpg");
+
+    background-repeat: no-repeat;
+
+    background-position: center top;
+
+    background-size: cover;
+
+    background-attachment: scroll;
+
+    overflow-x: hidden;
 }
 
 a {
@@ -57,7 +75,7 @@ a {
    HERO / PERFIL
 ========================================================= */
 
-.hero {
+..hero {
     position: relative;
 
     width: 100%;
@@ -66,14 +84,13 @@ a {
     overflow: hidden;
 
     border-radius: 25px;
+
     border: 1px solid rgba(0, 174, 255, 0.55);
 
-    background-image: url("./background.jpg");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+    background: transparent;
 
-    box-shadow: 0 0 45px rgba(0, 140, 255, 0.25);
+    box-shadow:
+        0 0 45px rgba(0, 140, 255, 0.25);
 
     animation: aparecer 0.8s ease;
 }
