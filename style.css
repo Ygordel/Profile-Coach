@@ -26,32 +26,39 @@ html {
 }
 
 body {
+    position: relative;
     margin: 0;
     min-height: 100vh;
 
     font-family: "Roboto", sans-serif;
     line-height: 1.6;
-
     color: var(--text);
 
-    background-color: var(--background);
-
-    background-image:
-        linear-gradient(
-            rgba(2, 8, 20, 0.20),
-            rgba(2, 8, 20, 0.35)
-        ),
-        url("./fundo.jpg");
-
-    background-repeat: no-repeat;
-
-    background-position: center top;
-
-    background-size: cover;
-
-    background-attachment: scroll;
-
+    background: var(--background);
     overflow-x: hidden;
+}
+
+/* Fundo global: fica atrás de toda a página e não depende do tamanho do body. */
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: 0;
+
+    background:
+        linear-gradient(
+            rgba(2, 8, 20, 0.14),
+            rgba(2, 8, 20, 0.34)
+        ),
+        url("./background.jpg") center top / cover no-repeat;
+
+    pointer-events: none;
+}
+
+/* Todo o conteúdo fica acima do fundo. */
+body > * {
+    position: relative;
+    z-index: 1;
 }
 
 main,
@@ -81,7 +88,7 @@ a {
    HERO / PERFIL
 ========================================================= */
 
-..hero {
+.hero {
     position: relative;
 
     width: 100%;
@@ -1538,9 +1545,6 @@ footer {
         grid-template-columns: 1fr;
     }
 
-    .education {
-        grid-template-columns: 1fr;
-    }
 
     .approvals {
         grid-template-columns: 1fr;
@@ -1587,8 +1591,8 @@ footer {
 
     .hero {
         min-height: 700px;
-
         border-radius: 18px;
+        background: transparent;
     }
 
     .hero-content {
@@ -1773,38 +1777,26 @@ footer {
         padding-top: 15px;
     }
 
-}
 
-@media (max-width: 600px) {
 
-    html,
-    body {
-        width: 100%;
-        min-height: 100%;
-
-        background-color: #020814;
-    }
-
-    body {
-        background-image:
+    /* Fundo permanece visível no mobile. */
+    body::before {
+        background:
             linear-gradient(
-                rgba(2, 8, 20, 0.12),
-                rgba(2, 8, 20, 0.25)
+                rgba(2, 8, 20, 0.10),
+                rgba(2, 8, 20, 0.28)
             ),
-            url("./fundo.jpg");
-
-        background-repeat: no-repeat;
-
-        background-position: center top;
-
-        background-size: cover;
-
-        background-attachment: scroll;
+            url("./background.jpg") center top / cover no-repeat;
     }
 
     main,
     section,
     .hero {
         background-color: transparent;
+    }
+
+    .outside-left,
+    .outside-right {
+        z-index: 2;
     }
 }
