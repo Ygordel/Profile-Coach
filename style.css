@@ -50,7 +50,7 @@ body::before {
             rgba(2, 8, 20, 0.14),
             rgba(2, 8, 20, 0.34)
         ),
-        url("./background.jpg") center top / cover no-repeat;
+        url("./fundo.jpg") center top / cover no-repeat;
 
     pointer-events: none;
 }
@@ -1786,7 +1786,7 @@ footer {
                 rgba(2, 8, 20, 0.10),
                 rgba(2, 8, 20, 0.28)
             ),
-            url("./background.jpg") center top / cover no-repeat;
+            url("./fundo.jpg") center top / cover no-repeat;
     }
 
     main,
