@@ -119,17 +119,6 @@ A interface utiliza uma identidade visual baseada em tecnologia e inovação, co
 
 ---
 
-## 📂 Estrutura do Projeto
-
-```text
-portfolio/
-│
-├── index.html
-├── style.css
-├── script.js
-│
-├── img/
-│   ├── perfil.jpg
 │   ├── background.jpg
 │   └── outros-recursos/
 │
